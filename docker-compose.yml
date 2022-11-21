@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+
+  flagdb:
+    container_name: flagdb
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: flag
+      POSTGRES_USER: flag
+      POSTGRES_DB: flagdb
+    ports:
+      - 5432:5432
